@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest_service"
+dynamic = ["version"]
+requires-python = ">=3.10"
+dependencies = [
+    "pytest>=6.0.0",
+    "docker>=6.1.0",
+]
+classifiers = [
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3 :: Only",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Operating System :: OS Independent",
+        "Development Status :: 5 - Production/Stable",
+        "Framework :: Pytest"
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+
+[project.urls]
+homepage = "https://github.com/anna-money/pytest-service"
+changelog = "https://github.com/anna-money/pytest-service/blob/master/CHANGELOG.md"
+
+[project.entry-points.pytest11]
+pytest_service = "pytest_service"
+
+[tool.setuptools]
+packages = ["pytest_service"]
+
+[tool.setuptools.package-data]
+pytest_service = ["py.typed", "VERSION"]
+
+[tool.setuptools.dynamic]
+version = { file = ["pytest_service/VERSION"] }
