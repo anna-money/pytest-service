@@ -8,3 +8,5 @@ twine==5.1.0
 pyright==1.1.363
 
 docker==7.0.0
+
+-e .
