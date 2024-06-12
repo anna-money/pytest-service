@@ -47,6 +47,7 @@ class AbstractService(abc.ABC, Generic[T]):
 
                 time.sleep(0.5)
             else:
+                assert container.id
                 raw_logs = cast(bytes, self._client.api.logs(container.id))
                 pytest.fail(
                     f"Failed to start {self.service_name} using {self._image} in {self._ready_timeout}"
