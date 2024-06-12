@@ -17,7 +17,7 @@ class IsPostgresReadyFunc(Protocol):
 def _try_get_is_postgres_ready_based_on_psycopg2() -> Optional[IsPostgresReadyFunc]:
     try:
         # noinspection PyPackageRequirements
-        import psycopg2
+        import psycopg2  # type: ignore[reportMissingModuleSource]
 
         def _is_postgres_ready(**params: Any) -> bool:
             try:
