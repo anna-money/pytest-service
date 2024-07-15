@@ -31,7 +31,7 @@ class AbstractService(abc.ABC, Generic[T]):
                     image=self._image,
                     environment=self._get_container_environment(),
                     command=self._get_container_command(),
-                    ports={self.service_port: unused_port},
+                    ports={str(self.service_port): unused_port},
                     detach=True,
                     tmpfs={self.data_path: ""},
                     stderr=True,
