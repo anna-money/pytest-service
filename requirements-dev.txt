@@ -1,11 +1,11 @@
-pytest==8.3.3
+pytest==8.3.4
 isort==5.13.2
 flake8==7.1.1
 black==24.10.0
-setuptools==75.3.0
-wheel==0.44.0
-twine==5.1.1
-pyright==1.1.387
+setuptools==75.6.0
+wheel==0.45.1
+twine==6.0.1
+pyright==1.1.390
 
 docker==7.1.0
 
